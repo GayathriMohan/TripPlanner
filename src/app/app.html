@@ -5,7 +5,7 @@
     <div class="data-entry text-center">
         <section>
             <span>Choose your Starting point :</span>
-            <input type="text" name="startpoint" [(ngModel)]="start">
+            <input type="text" name="startpoint" [(ngModel)]="starting">
         </section>
         <section>
             <span>Choose your Destination :</span>
@@ -16,5 +16,17 @@
             <input type="number" name="stopsinbetween" [(ngModel)]="stops">
         </section>
     </div>
-    <button type="submit" class="button" (click)="onClickMe(start,destination,stops)">Go</button>
+    <!-- <button type="submit" class="button" (click)="onClickMe(starting,destination,stops)">Go</button> -->
+    <button type="submit" class="button" (click)="onAddItem(trip)">Go</button>
+    <accordion></accordion>
+    <!-- <ul>
+        <li>STOPS</li>
+        <li>FROM</li>
+        <li>TO</li>
+    </ul>
+    <ul>
+        <li *ngFor="#trip of trips" >
+            {{trip}}
+        </li>
+    </ul> -->
 </main>

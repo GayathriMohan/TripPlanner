@@ -1,19 +1,12 @@
-import {Component} from 'angular2/core';
-// import {AppAccordion} from './appaccordion';
+import {bootstrap} from 'angular2/platform/browser';
+import {Component,Input,Output} from 'angular2/core';
+import {AppAccordion} from './appaccordion';
 
 @Component({
 	selector:'app',
-	template:require('./app.html')
+	template:'<accordion></accordion>',
+	directives:[AppAccordion]
 })
 
 export class AppData{ 
-	// constructor(){
-	// 	let trips=[];
-	// }
-	onClickMe(start,destination,stops){
-	  let isClicked=true;
-	  let trips=[];
-	  trips.push(start,destination,stops);
-	  console.log(trips);
-	}
 }
