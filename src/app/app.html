@@ -1,30 +1,20 @@
-<html>
 <header>
     <h1>Trip Planner</h1>
 </header>
-<main>
-    <div class="data-entry">
-        <p>Choose your Starting point :</p>
-        <p>Choose your Destination :</p>
-        <p>No. of Stops : </p>
-        <span></span>
-        <button type="submit">Go</button>
+<main class="text-center">
+    <div class="data-entry text-center">
+        <section>
+            <span>Choose your Starting point :</span>
+            <input type="text" name="startpoint" [(ngModel)]="start">
+        </section>
+        <section>
+            <span>Choose your Destination :</span>
+            <input type="text" name="destinationpoint" [(ngModel)]="destination">
+        </section>
+        <section>
+            <span>No. of Stops : </span>
+            <input type="number" name="stopsinbetween" [(ngModel)]="stops">
+        </section>
     </div>
-    <div>
-        <ul>
-            <li><b>STOPS</b></li>
-            <li><b>FROM</b></li>
-            <li><b>TO</b></li>
-        </ul>
-        <ul ng-repeat>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
+    <button type="submit" class="button" (click)="onClickMe(start,destination,stops)">Go</button>
 </main>
-<footer>
-    <p>Copyright @2016</p>
-</footer>
-
-</html>

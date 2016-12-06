@@ -1,0 +1,10 @@
+<ul *ngIf='isClicked'>
+    <li>STOPS</li>
+    <li>FROM</li>
+    <li>TO</li>
+</ul>
+<ul>
+    <li *ngFor="let trip of trips">
+        {{trip.start}}
+    </li>
+</ul>
