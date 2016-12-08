@@ -1,10 +1,5 @@
 import {bootstrap} from 'angular2/platform/browser';
-import {AppData} from './app/appdata';
-import {AppAccordion} from './app/appaccordion';
+import {AppStructure} from './app/partials_ts/app_structure';
 
-bootstrap(AppData)
-	.catch(err=>console.log(err));
-
-
-bootstrap(AppAccordion)
+bootstrap(AppStructure)
 	.catch(err=>console.log(err));

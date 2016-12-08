@@ -61,7 +61,7 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'raw-loader',
-        exclude: [ path.resolve(__dirname, "src/trip.html") ]
+        exclude: [ path.resolve(__dirname, "src/index.html") ]
       }
     ]
   },
@@ -70,7 +70,7 @@ module.exports = {
     // Copy static assets to the build folder
     new CopyWebpackPlugin([{ from: 'src/css', to: 'css' }]),
     // Generate the index.html
-    new HtmlWebpackPlugin({ template: 'src/trip.html' })
+    new HtmlWebpackPlugin({ template: 'src/index.html' })
   ]
 }
  

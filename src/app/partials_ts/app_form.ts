@@ -3,5 +3,5 @@ export class Trip{
 	tripsource:string,
 	tripdestination:string,
 	tripstops:number
-		){ }	
+	){ }	
 }

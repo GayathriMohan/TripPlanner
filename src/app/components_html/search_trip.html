@@ -1,0 +1,5 @@
+<button class="button" (click)="onAdd()">New Stop</button>
+<button class="button" (click)="onRemove()">Remove Stop</button>
+<ul #activeComponent [hidden]="!clicked">
+	<trip-details></trip-details>
+</ul> 
