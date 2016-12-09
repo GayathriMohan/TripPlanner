@@ -7,6 +7,7 @@ import {TripDetails} from './trip_details';
 @Component({
     selector: 'structure,search-trip',
     template: require('../components_html/app_structure.html'),
+    // styles : [require('../components_css/app_structure.css')],
     directives:[SearchTrip]
 })
 
