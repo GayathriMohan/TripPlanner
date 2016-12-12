@@ -24,7 +24,7 @@
             <li>To</li>
             <li>Stops</li>
         </ul>
-        <ul>
+        <ul  *ngFor="let i of arr(num).fill(1)">
             <li>
                 <div>{{ trip.tripsource }}</div>
             </li>

@@ -62,6 +62,11 @@ module.exports = {
         test: /\.html$/,
         loader: 'raw-loader',
         exclude: [ path.resolve(__dirname, "src/index.html") ]
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader',
+        exclude: [ path.resolve(__dirname, "src/css") ]
       }
     ]
   },
