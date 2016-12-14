@@ -14,20 +14,29 @@ import {TripDetails} from './trip_details';
 export class AppStructure {
 	trips : number;
   	looparray :number[];
-	value='';
+	value = '';
+	submitted = false;
+  	finalto : boolean;
+  	initialfrom : boolean;
+  	active = true;
 	totalstops(value: number) { 
 		this.trips = value;
 		let arr : number[] = [];
-		for(let fillelem=0; fillelem < this.trips; fillelem++){
+		for(let fillelem=1; fillelem <= this.trips; fillelem++){
+
+			if(fillelem == 1){ this.initialfrom = true; }
+			else{ this.initialfrom = false; }
+
+			if(fillelem == this.trips){ this.finalto = true; }
+			else{ this.finalto = false; }
+
 			arr.push(this.trips);
 		}
 		this.looparray = arr;
 		console.log(this.looparray);
 	}
-  trip = new Trip('Tvm','Ekm',1);
-  submitted = false;
-  onSubmit() { 
-  	this.submitted = true; 
-  }
-  active = true;
+  	trip = new Trip('Tvm','Ekm',1);
+  	onSubmit() { 
+  		this.submitted = true; 
+  	}
 }

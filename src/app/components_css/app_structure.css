@@ -51,3 +51,14 @@
     border-radius: 5px;
     margin-bottom: 35px;
 }
+
+.trip_lists input{
+    border: none;
+    background: transparent;
+    text-align: center;
+    color: #464646;
+}
+
+.trip_lists input,button:focus{
+    outline: 0 !important;
+}

@@ -26,13 +26,19 @@
         </ul>
         <ul *ngFor="let i of looparray" class="trip_lists">
             <li>
-                <div>{{ trip.tripsource }}</div>
+                <div>
+                    <input type="text" value="{{ trip.tripsource }}">
+                </div>
             </li>
             <li>
-                <div>{{ trip.tripdestination }}</div>
+                <div>
+                    <input type="text" value="{{ trip.tripdestination }}">
+                </div>
             </li>
             <li>
-                <div>{{ trip.tripstops }}</div>
+                <div>
+                    <input type="text" value="{{ trip.tripstops }}">
+                </div>
             </li>
             <search-trip></search-trip>
         </ul>
