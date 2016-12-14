@@ -1,40 +1,44 @@
+<header>Trip Planner</header>
 <div>
     <div class="data-entry text-center">
-        <header>Trip Planner</header>
+        <header id="form_header">Plan Your Trip</header>
         <form *ngIf="active" (ngSubmit)="onSubmit()" #tripForm="ngForm" novalidate>
-            <div>
-                <label for="tripsource">Enter your Starting point</label>
-                <input type="text" required [(ngModel)]="trip.tripsource" ngControl="tripsource" #tripsource="ngForm" #source>
+            <div class="form_field">
+                <input type="text" placeholder="Enter trip source" required [(ngModel)]="trip.tripsource" ngControl="tripsource" #tripsource="ngForm">
                 <div [hidden]="tripsource.valid || tripsource.pristine">
                     tripsource is required
                 </div>
             </div>
-            <div>
-                <label for="tripdestination">Enter your Destination</label>
-                <input type="text" class="form-control" [(ngModel)]="trip.tripdestination" ngControl="tripdestination" #destination>
+            <div class="form_field">
+                <input type="text" placeholder="Enter destination source" class="form-control" [(ngModel)]="trip.tripdestination" ngControl="tripdestination">
             </div>
-            <div>
-                <label for="tripstops">No. of Stops</label>
-                <input type="number" [(ngModel)]="trip.tripstops" ngControl="tripstops" #stops>
+            <div class="form_field">
+                <input type="number" placeholder="Enter the number of stops" [(ngModel)]="trip.tripstops" ngControl="tripstops" #stops>
             </div>
             <button type="submit" class="button" [disabled]="!tripForm.form.valid" (click)="totalstops(stops.value)">Submit</button>
         </form>
     </div>
-    <div [hidden]="!submitted" class="text-center">
+    <div [hidden]="!submitted" class="text-center search_trip">
         <ul>
             <li>From</li>
             <li>To</li>
             <li>Stops</li>
         </ul>
-        <ul>
+        <ul *ngFor="let i of looparray" class="trip_lists">
             <li>
-                <div>{{ trip.tripsource }}</div>
+                <div>
+                    <input type="text" value="{{ trip.tripsource }}">
+                </div>
             </li>
             <li>
-                <div>{{ trip.tripdestination }}</div>
+                <div>
+                    <input type="text" value="{{ trip.tripdestination }}">
+                </div>
             </li>
             <li>
-                <div>{{ trip.tripstops }}</div>
+                <div>
+                    <input type="text" value="{{ trip.tripstops }}">
+                </div>
             </li>
             <search-trip></search-trip>
         </ul>

@@ -5,6 +5,7 @@ import {TripDetails} from './trip_details';
 @Component({
 	selector:'search-trip',
 	template:require('../components_html/search_trip.html'),
+  styles: [require('../components_css/search_trip.css').toString()],
 	directives:[TripDetails]
 })
 
